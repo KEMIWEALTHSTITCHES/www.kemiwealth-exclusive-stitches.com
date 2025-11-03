@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEMIWEALTH EXCLUSIVE STITCHES 🧵</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    nav {display: flex; gap: 20px;}
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {color: #ff69b4; background: rgba(255,255,255,0.2);}
+
+    .menu-toggle {display: none; flex-direction: column; cursor: pointer;}
+    .menu-toggle div {width: 25px; height: 3px; background: white; margin: 4px; transition: 0.3s;}
+    .menu-toggle.active div:nth-child(1) {transform: rotate(-45deg) translate(-5px, 6px);}
+    .menu-toggle.active div:nth-child(2) {opacity: 0;}
+    .menu-toggle.active div:nth-child(3) {transform: rotate(45deg) translate(-5px, -6px);}
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      position: relative;
+    }
+    .hero h2 {font-size: 36px; margin-bottom: 10px;}
+    .hero p {font-size: 18px; margin-bottom: 20px;}
+    .hero button {
+      background: #fff; color: #4169e1; border: none;
+      padding: 12px 24px; border-radius: 30px;
+      font-weight: bold; cursor: pointer; transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .hero button:hover {background: #4169e1; color: white; transform: translateY(-3px);}
+
+    .gallery {max-width: 1100px; margin: 60px auto; text-align: center;}
+    .gallery h2 {color: #4169e1; margin-bottom: 30px; font-size: 32px;}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; padding: 0 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {transform: translateY(-10px);}
+    .gallery-grid img {
+      width: 100%; height: 320px; object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {transform: scale(1.05);}
+    .gallery-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(65, 105, 225, 0.8);
+      color: white;
+      padding: 10px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover .overlay {transform: translateY(0);}
+
+    .about {
+      background: #fff; padding: 60px 20px; text-align: center;
+    }
+    .about h2 {color: #4169e1; margin-bottom: 15px; font-size: 32px;}
+    .about p {
+      font-size: 17px; line-height: 1.6;
+      max-width: 800px; margin: auto;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #ff69b4, #4169e1); color: white;
+      text-align: center; padding: 60px 20px;
+    }
+    .contact h2 {font-size: 26px; margin-bottom: 15px;}
+    .contact p {font-size: 16px; margin-bottom: 25px;}
+
+    form {
+      background: white;
+      max-width: 500px;
+      margin: 0 auto 30px;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: left;
+      color: #333;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    form label {display: block; margin: 10px 0 5px; font-weight: 600;}
+    form input, form textarea {
+      width: 100%; padding: 10px;
+      border: 1px solid #ccc; border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+    form input:focus, form textarea:focus {
+      border-color: #4169e1;
+      outline: none;
+    }
+    form textarea {resize: none; height: 100px;}
+    form button {
+      width: 100%; background: linear-gradient(135deg, #ff69b4, #4169e1); color: white;
+      border: none; padding: 12px; font-weight: bold;
+      border-radius: 8px; cursor: pointer; margin-top: 10px;
+      transition: 0.3s;
+    }
+    form button:hover {background: linear-gradient(135deg, #4169e1, #ff69b4);}
+
+    .contact a {
+      display: inline-block; margin: 10px; padding: 12px 20px;
+      background: white; color: #4169e1; border-radius: 25px;
+      text-decoration: none; font-weight: bold; transition: 0.3s;
+    }
+    .contact a:hover {background: #333; color: white;}
+
+    footer {
+      background: linear-gradient(135deg, #ff69b4, #4169e1); color: #fff;
+      text-align: center; padding: 15px; font-size: 14px;
+    }
+
+    /* Modal for image viewing */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      margin-top: 2%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .close:hover {color: #ff69b4;}
+    .modal-caption {
+      text-align: center;
+      color: #fff;
+      padding: 10px 0;
+      font-size: 18px;
+    }
+
+    /* Bag section */
+    .bags {
+      background: #f5f5f5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .bags h2 {
+      color: #4169e1;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .bags-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .bag-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .bag-item:hover {
+      transform: translateY(-10px);
+    }
+    .bag-item img {
+      width: 50%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .bag-info {
+      padding: 15px;
+    }
+    .bag-info h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .bag-info p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .bag-price {
+      font-weight: bold;
+      color: #4169e1;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .bag-btn {
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      font-weight: bold;
+    }
+    .bag-btn:hover {
+      background: linear-gradient(135deg, #4169e1, #ff69b4);
+    }
+
+    /* Beret/Cap section */
+    .berets {
+      background: #f5f5f5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .berets h2 {
+      color: #4169e1;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .berets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .beret-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .beret-item:hover {
+      transform: translateY(-10px);
+    }
+    .beret-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .beret-info {
+      padding: 15px;
+    }
+    .beret-info h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .beret-info p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .beret-price {
+      font-weight: bold;
+      color: #4169e1;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .beret-btn {
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      font-weight: bold;
+    }
+    .beret-btn:hover {
+      background: linear-gradient(135deg, #4169e1, #ff69b4);
+    }
+
+    /* Slippers and Sandals section */
+    .slippers {
+      background: #f5f5f5;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .slippers h2 {
+      color: #4169e1;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .slippers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .slipper-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .slipper-item:hover {
+      transform: translateY(-10px);
+    }
+    .slipper-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .slipper-info {
+      padding: 15px;
+    }
+    .slipper-info h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .slipper-info p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .slipper-price {
+      font-weight: bold;
+      color: #4169e1;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .slipper-btn {
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      font-weight: bold;
+    }
+    .slipper-btn:hover {
+      background: linear-gradient(135deg, #4169e1, #ff69b4);
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.3s;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .back-to-top.active {
+      opacity: 1;
+    }
+    .back-to-top:hover {
+      background: linear-gradient(135deg, #4169e1, #ff69b4);
+      transform: translateY(-5px);
+    }
+
+    /* Page sections */
+    .page-section {
+      display: none;
+    }
+    .page-section.active {
+      display: block;
+    }
+
+    /* New Features */
+    .testimonials {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .testimonials h2 {
+      color: #4169e1;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testimonial-item {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: #4169e1;
+    }
+
+    .newsletter {
+      background: linear-gradient(135deg, #ff69b4, #4169e1);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .newsletter h2 {
+      margin-bottom: 15px;
+    }
+    .newsletter p {
+      margin-bottom: 25px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      font-size: 16px;
+    }
+    .newsletter-form button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .newsletter-form button:hover {
+      background: #555;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none; flex-direction: column;
+        background: linear-gradient(135deg, #ff69b4, #4169e1);
+        position: absolute;
+        top: 70px; right: 0; width: 100%;
+        text-align: center; padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      }
+      nav.active {display: flex;}
+      .menu-toggle {display: flex;}
+      .hero h2 {font-size: 28px;}
+      .hero p {font-size: 16px;}
+      .gallery h2, .about h2, .bags h2, .berets h2, .slippers h2 {font-size: 26px;}
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .newsletter-form input, .newsletter-form button {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="logo.png.jpg" alt="Kemiwealth Logo" class="logo">
+      <h1>KEMIWEALTH EXCLUSIVE STITCHES 🧵</h1>
+    </div>
+    <nav id="navMenu">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#gallery" class="nav-link">Styles</a>
+      <a href="#bags" class="nav-link">Bags</a>
+      <a href="#berets" class="nav-link">Berets</a>
+      <a href="#slippers" class="nav-link">Slippers</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <div></div><div></div><div></div>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="hero page-section active" id="home">
+    <h2>Welcome to KEMIWEALTH EXCLUSIVE STITCHES 🧵</h2>
+    <p>Discover stunning designs, choose your favourite style, and contact us directly on WhatsApp!</p>
+    <button onclick="showSection('gallery')">View Our Styles</button>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery page-section" id="gallery">
+    <h2>Our Fashion Styles inspiration 👗</h2>
+    <div class="gallery-grid">
+      <!-- 15 fashion style images -->
+      <div class="gallery-item" onclick="openModal('style1.jpg', 'Elegant Evening Gown')">
+        <img src="style1.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Elegant Evening Gown</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style2.jpg', 'Traditional African Wear')">
+        <img src="style2.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Traditional African Wear</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style3.jpg', 'Modern Party Dress')">
+        <img src="style3.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Modern Party Dress</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style4.jpg', 'Bridal Collection')">
+        <img src="style4.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Bridal Collection</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style5.jpg', 'Casual Chic Outfit')">
+        <img src="style5.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Casual Chic Outfit</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style6.jpg', 'Office Attire')">
+        <img src="style6.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Office Attire</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style7.jpg', 'Cultural Celebration Dress')">
+        <img src="style7.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Cultural Celebration Dress</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style8.jpg', 'Designer Suit')">
+        <img src="style8.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Designer Suit</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style9.jpg', 'Ankara Gown')">
+        <img src="style9.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Ankara Gown</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style10.jpg', 'Aso Ebi Collection')">
+        <img src="style10.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Aso Ebi Collection</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style11.jpg', 'Evening Gown')">
+        <img src="style11.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Evening Gown</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style12.jpg', 'Traditional Attire')">
+        <img src="style12.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Traditional Attire</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style13.jpg', 'Modern Dress')">
+        <img src="style13.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Modern Dress</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style14.jpg', 'Designer Gown')">
+        <img src="style14.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Designer Gown</div>
+      </div>
+      <div class="gallery-item" onclick="openModal('style15.jpg', 'Party Wear')">
+        <img src="style15.jpg" alt="Kemiwealth gown design">
+        <div class="overlay">Party Wear</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bags Section -->
+  <section class="bags page-section" id="bags">
+    <h2>Our Fashion Bags 👜</h2>
+    <div class="bags-grid">
+      <div class="bag-item">
+        <img src="fashion bag.1.jpg" alt="Designer Handbag">
+        <div class="bag-info">
+          <h3>Designer Handbag</h3>
+          <p>Perfect for special occasions and formal events</p>
+          <div class="bag-price">₦4,500</div>
+          <button class="bag-btn" onclick="orderItem('Designer Handbag', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.2.jpg" alt="Designer handbag">
+        <div class="bag-info">
+          <h3>Bag</h3>
+          <p>Designer handbag</p>
+          <div class="bag-price">₦4,500</div>
+          <button class="bag-btn" onclick="orderItem('Designer handbag', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.3.jpg" alt="Designer handbag">
+        <div class="bag-info">
+          <h3>Bag</h3>
+          <p>Designer handbag</p>
+          <div class="bag-price">₦5,000</div>
+          <button class="bag-btn" onclick="orderItem('Designer handbag', '₦5,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.4.jpg" alt="Beaded Handbag">
+        <div class="bag-info">
+          <h3>designer Handbag</h3>
+          <p>for special outing</p>
+          <div class="bag-price">₦4,500</div>
+          <button class="bag-btn" onclick="orderItem('Beaded Handbag', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.5.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>Crossbody Bag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦4,500</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.6.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>fashion bag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦5,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦5,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.7.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>fashion Bag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦5,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦5,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.8.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>designer handBag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦5,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦5,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.9.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>fashion Bag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦5,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦5,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.10.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>fashion handBag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦6,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.11.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>fashion handBag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦6,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="bag-item">
+        <img src="fashion bag.12.jpg" alt="Crossbody Bag">
+        <div class="bag-info">
+          <h3>Designer handBag</h3>
+          <p>Convenient and stylish for hands-free carrying</p>
+          <div class="bag-price">₦6,000</div>
+          <button class="bag-btn" onclick="orderItem('Crossbody Bag', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Berets Section -->
+  <section class="berets page-section" id="berets">
+    <h2>Our Fashion Berets & Caps 🧢</h2>
+    <div class="berets-grid">
+      <div class="beret-item">
+        <img src="beret.1.jpg" alt="Classic Beret">
+        <div class="beret-info">
+          <h3>Classic Beret</h3>
+          <p>Elegant and timeless beret for any occasion</p>
+          <div class="beret-price">₦3,500</div>
+          <button class="beret-btn" onclick="orderItem('Classic Beret', '₦3,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="beret-item">
+        <img src="beret.2.jpg" alt="Designer Cap">
+        <div class="beret-info">
+          <h3>Designer Cap</h3>
+          <p>Stylish cap with unique embroidery</p>
+          <div class="beret-price">₦4,000</div>
+          <button class="beret-btn" onclick="orderItem('Designer Cap', '₦4,000')">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slippers and Sandals Section -->
+  <section class="slippers page-section" id="slippers">
+    <h2>Our Slippers & Sandals 👡</h2>
+    <div class="slippers-grid">
+      <!-- 14 slippers and sandals -->
+      <div class="slipper-item">
+        <img src="slippers.1.jpg" alt="Designer Slippers">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Comfortable and stylish indoor slippers</p>
+          <div class="slipper-price">₦4,500</div>
+          <button class="slipper-btn" onclick="orderItem('Designer Slippers', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.2.jpg" alt="Evening Sandals">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Elegant sandals for special occasions</p>
+          <div class="slipper-price">₦7,000</div>
+          <button class="slipper-btn" onclick="orderItem('Evening Sandals', '₦7,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.3.jpg" alt="Casual Sandals">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Perfect for everyday wear</p>
+          <div class="slipper-price">₦4,500</div>
+          <button class="slipper-btn" onclick="orderItem('Casual Sandals', '₦4,500')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.4.jpg" alt="Beach Sandals">
+        <div class="slipper-info">
+          <h3>Designer sandal</h3>
+          <p>Perfect for everyday wear</p>
+          <div class="slipper-price">₦12,000</div>
+          <button class="slipper-btn" onclick="orderItem('Beach Sandals', '₦12,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.5.jpg" alt="Designer Flip Flops">
+        <div class="slipper-info">
+          <h3>Designer sandal</h3>
+          <p>Stylish sandals with unique design</p>
+          <div class="slipper-price">₦13,000</div>
+          <button class="slipper-btn" onclick="orderItem('Designer Flip Flops', '₦13,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.6.jpg" alt="Wedding Sandals">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Elegant Designer Slippers for bridal occasions</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Wedding Sandals', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.7.jpg" alt="Traditional Slippers">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Slippers with designing patterns</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Traditional Slippers', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.8.jpg" alt="Designer Slides">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Comfortable Designer Slipper</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Designer Slides', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.9.jpg" alt="Evening Slippers">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Elegant slippers for formal events</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Evening Slippers', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.10.jpg" alt="Casual Slippers">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Comfortable slippers for everyday use</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Casual Slippers', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.11.jpg" alt="Designer Mules">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Trendy mules for fashion-forward individuals</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Designer Mules', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.12.jpg" alt="Beaded Sandals">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>Perfect for everyday wear</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Beaded Sandals', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+      <div class="slipper-item">
+        <img src="slippers.13.jpg" alt="Leather Sandals">
+        <div class="slipper-info">
+          <h3>Designer Slippers</h3>
+          <p>High-quality Designer slippers</p>
+          <div class="slipper-price">₦6,000</div>
+          <button class="slipper-btn" onclick="orderItem('Leather Sandals', '₦6,000')">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials page-section" id="testimonials">
+    <h2>What Our Customers Say 💬</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-item">
+        <div class="testimonial-text">
+          "I absolutely love my custom dress from Kemiwealth! The attention to detail is amazing and the fit is perfect. I received so many compliments at my sister's wedding."
+        </div>
+        <div class="testimonial-author">- Chioma A.</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-text">
+          "The quality of their bags is exceptional. I've been using my leather bag for months and it still looks brand new. Definitely worth the investment!"
+        </div>
+        <div class="testimonial-author">- Tunde B.</div>
+      </div>
+      <div class="testimonial-item">
+        <div class="testimonial-text">
+          "I ordered slippers for my entire family and we're all delighted with the comfort and style. The customer service was excellent throughout the process."
+        </div>
+        <div class="testimonial-author">- Funke C.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about page-section" id="about">
+    <h2>About KEMIWEALTH EXCLUSIVE STITCHES</h2>
+    <p>
+      KEMIWEALTH EXCLUSIVE STITCHES creates elegant, unique, and culturally inspired fashion.
+      We specialize in beautiful outfits — from traditional African wear to classy modern designs.
+      Our mission is to make you look confident, stylish, and outstanding in every event!
+    </p>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter page-section" id="newsletter">
+    <h2>Stay Updated with Our Latest Designs</h2>
+    <p>Subscribe to our newsletter to receive updates on new arrivals, special offers, and fashion tips.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact page-section" id="contact">
+    <h2>Book a Style 💬</h2>
+    <p>Fill out the form below and send your details directly to our WhatsApp 👇</p>
+
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="style">Preferred Style</label>
+      <input type="text" id="style" placeholder="e.g. Ankara Gown, Suit, Aso Ebi" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Any extra details?"></textarea>
+
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+
+    <a href="mailto:kemiwealth@example.com">📧 Email Us</a>
+  </section>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">↑</div>
+  <footer>
+    &copy; 2025 KEMIWEALTH EXCLUSIVE STITCHES. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    // Navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        showSection(targetId);
+      
+        // Close mobile menu if open
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
+
+    // Show specific section
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('active');
+      });
+    
+      // Show the selected section
+      document.getElementById(sectionId).classList.add('active');
+    
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    // Image modal functionality
+    function openModal(imageSrc, caption) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const captionText = document.getElementById('modalCaption');
+    
+      modal.style.display = 'block';
+      modalImg.src = imageSrc;
+      captionText.innerHTML = caption;
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+      const modal = document.getElementById('imageModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+
+    // Booking form -> WhatsApp redirect
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const style = document.getElementById('style').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Hello KEMIWEALTH EXCLUSIVE STITCHES! 👗%0AMy name is ${name}.%0AEmail: ${email}%0AStyle: ${style}%0AMessage: ${message}`;
+      window.open(`https://wa.me/2348024252190?text=${text}`, '_blank');
+    });
+
+    // Order item functionality
+    function orderItem(itemName, price) {
+      const text = `Hello KEMIWEALTH EXCLUSIVE STITCHES! 🛍️%0AI would like to order: ${itemName}%0APrice: ${price}%0APlease contact me with details.`;
+      window.open(`https://wa.me/2348024252190?text=${text}`, '_blank');
+    }
+
+    // Newsletter form
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for subscribing to our newsletter!');
+      newsletterForm.reset();
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    });
+  
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
